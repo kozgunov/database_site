@@ -1,8 +1,27 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #04fadd, #4d52f5); /* Add gradient background */
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.auth-container {
+    width: 350px; /* Increased width */
+    padding: 30px; /* Increased padding */
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 8px; /* Added border-radius for rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition */
 }
 
+.auth-container:hover {
+    transform: translateY(-10px); /* Slight upward movement on hover */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+/*
 .auth-container {
     width: 300px;
     padding: 20px;
@@ -11,7 +30,7 @@ body {
     box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
     text-align: center;
 }
-
+*/
 .auth-container input[type="text"],
 .auth-container input[type="email"],
 .auth-container input[type="password"] {
@@ -34,4 +53,68 @@ body {
 
 .auth-container button:hover {
     background-color: #555;
+}
+
+.forgot-password {
+    display: block;
+    margin: 10px 0;
+    text-align: right;
+    text-decoration: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 50px; /* Adjust according to your logo's aspect ratio */
+    height: 50px;
+    margin-right: 10px;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.password-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+.toggle-password {
+    cursor: pointer;
+    width: 20px;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.assistant-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #00BFFF; /* Sky Blue Color */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.assistant-icon {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
 }
