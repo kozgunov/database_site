@@ -4,20 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="signing.css">
-    <title>Sign Up</title>
+    <title>Sign Up - Name</title>
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+
 </head>
 <body>
     <div class="auth-container">
+        <div class="logo-container">
+            <img src="path-to-logo.png" alt="Name Logo" class="logo">
+            <span class="site-title">Name</span>
+        </div>
         <h2>Sign Up</h2>
         <form id="signupForm">
             <input type="text" placeholder="Full Name" required>
             <input type="email" placeholder="Email Address" required>
-            <input type="password" placeholder="Password" required>
-            <input type="password" placeholder="Confirm Password" required>
+            <div class="password-container">
+                <input type="password" placeholder="Password" id="password" required>
+                <img src="eye-icon.png" alt="Show Password" class="toggle-password" onclick="togglePasswordVisibility('password', this)">
+            </div>
+            <div class="password-container">
+                <input type="password" placeholder="Confirm Password" id="confirmPassword" required>
+                <img src="eye-icon.png" alt="Show Password" class="toggle-password" onclick="togglePasswordVisibility('confirmPassword', this)">
+            </div>
+
             <button type="submit">Sign Up</button>
-        </form>
+        </form> 
         <p>Already have an account? <a href="signin.html">Sign In</a></p>
     </div>
+    <div class="assistant-container" onclick="openAssistant()">
+        <span class="assistant-icon">?</span>
+    </div>
+    
     <script src="signing.js"></script>
+    <!--<script src="https://apis.google.com/js/platform.js" async defer></script>-->
 </body>
 </html>
